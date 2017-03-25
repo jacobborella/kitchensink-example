@@ -24,11 +24,7 @@ import org.jboss.shrinkwrap.impl.base.filter.ExcludeRegExpPaths;
 @RunWith(Arquillian.class)
 @Category(UnitTest.class)
 public class MemberRegistrationTest {
-   @Deployment
-   public static Archive<?> createTestArchive() {
-      return ShrinkWrap.create(WebArchive.class, "test.war");
-   }
-   @Test
+  @Test
    public void testRegister() throws Exception {
       assetNotNull(new Object());
    }
