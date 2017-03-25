@@ -29,9 +29,8 @@ public class MemberRegistrationTest {
             .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
             // Deploy our test datasource
-            //             .addAsWebInfResource("test-ds.xml", "test-ds.xml");
-            //                }
-            //
+                         .addAsWebInfResource("test-ds.xml", "test-ds.xml");
+   }
    @Test
    public void testRegister() throws Exception {
      assertNotNull(new Object());
