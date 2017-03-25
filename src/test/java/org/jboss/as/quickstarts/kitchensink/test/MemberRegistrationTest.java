@@ -19,7 +19,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.experimental.categories.Category;
 
-@Category(UnitTest.class)
+@Category(org.jboss.as.quickstarts.tasksrs.category.UnitTest.class)
 @RunWith(Arquillian.class)
 public class MemberRegistrationTest {
   @Test
