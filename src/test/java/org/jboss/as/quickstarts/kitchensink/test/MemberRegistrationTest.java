@@ -17,7 +17,9 @@ import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.experimental.categories.Category;
 
+@Category(UnitTest.class)
 @RunWith(Arquillian.class)
 public class MemberRegistrationTest {
    @Deployment
