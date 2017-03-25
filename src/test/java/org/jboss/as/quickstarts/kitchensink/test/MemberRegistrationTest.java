@@ -17,8 +17,11 @@ import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.experimental.categories.Category;
+
 
 @RunWith(Arquillian.class)
+@Category(org.jboss.as.quickstarts.kitchensink.test.category.UnitTest.class)
 public class MemberRegistrationTest {
    @Deployment
    public static Archive<?> createTestArchive() {
