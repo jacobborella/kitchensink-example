@@ -1,4 +1,4 @@
-package org.jboss.as.quickstarts.kitchensink.category;
+package org.jboss.as.quickstarts.kitchensink.test.category;
 
 public interface UnitTest {
 }
