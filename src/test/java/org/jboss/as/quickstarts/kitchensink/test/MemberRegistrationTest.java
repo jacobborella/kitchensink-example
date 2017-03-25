@@ -18,17 +18,21 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.experimental.categories.Category;
+import org.jboss.as.quickstarts.kitchensink.test.category.UnitTest;
 
-@Category(org.jboss.as.quickstarts.kitchensink.test.category.UnitTest.class)
 @RunWith(Arquillian.class)
+@Category(UnitTest.class)
 public class MemberRegistrationTest {
    @Deployment
-    public static WebArchive deployment() throws IllegalArgumentException, FileNotFoundException {
-        return new DefaultDeployment();
-}
+   public static Archive<?> createTestArchive() {
+      return ShrinkWrap.create(WebArchive.class, "test.war")
+            .addClasses(Member.class, MemberRegistration.class, Resources.class)
+            .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
+            .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
+            // Deploy our test datasource
+            .addAsWebInfResource("test-ds.xml", "test-ds.xml");
+   }
    @Test
    public void testRegister() throws Exception {
-   //  assertNotNull(new Object());
-   }
-   
+  }
 }
