@@ -19,9 +19,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.experimental.categories.Category;
 import org.jboss.shrinkwrap.impl.base.filter.ExcludeRegExpPaths;
+import org.mockito.runners.MockitoJUnitRunner;
 
 
-@RunWith(Arquillian.class)
+@RunWith(MockitoJUnitRunner.class)
 @Category(org.jboss.as.quickstarts.kitchensink.test.category.UnitTest.class)
 public class MemberRegistrationTest {
    @Deployment
