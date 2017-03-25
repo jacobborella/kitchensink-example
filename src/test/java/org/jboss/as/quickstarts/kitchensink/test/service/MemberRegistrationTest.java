@@ -39,6 +39,9 @@ public class MemberRegistrationTest {
    public void testRegister() throws Exception {
       Member member = new Member();
       member.setName("Jacob");
+      member.setEmail("jb@test.dk");
+      assertEquals("Jacob", member.getName());
+      assertEquals(jb@test.dk", member.getEmail());
    }
    
 }
