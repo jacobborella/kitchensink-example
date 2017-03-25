@@ -115,7 +115,11 @@
             <version>2.3.1.GA</version>
             <scope>provided</scope>
         </dependency>
-
+<dependency>
+    <groupId>javax.validation</groupId>
+    <artifactId>validation-api</artifactId>
+    <version>1.0.0.GA</version>
+</dependency>
         <!-- Import the EJB API, we use provided scope as the API is included in JBoss EAP 6 -->
         <dependency>
             <groupId>org.jboss.spec.javax.ejb</groupId>
