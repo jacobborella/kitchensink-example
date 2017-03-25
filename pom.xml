@@ -265,7 +265,9 @@
                     <plugin>
                         <artifactId>maven-surefire-plugin</artifactId>
 						<configuration>
-							<groups>org.jboss.as.quickstarts.kitchensink.test.MemberRegistrationTest</groups>
+							<includes>
+            <include>org.jboss.as.quickstarts.kitchensink.test.MemberRegistrationTest.java</include>
+          </includes>
 						</configuration>
                     </plugin>
                 </plugins>
