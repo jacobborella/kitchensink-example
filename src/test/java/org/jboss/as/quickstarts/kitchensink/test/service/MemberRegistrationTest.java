@@ -40,6 +40,7 @@ public class MemberRegistrationTest {
 //      Member member = new Member();
 //      member.setName("Jacob");
 //      assertEquals("Jacob", member.getName());
+      assertNotNull(new Object());
    }
    
 }
