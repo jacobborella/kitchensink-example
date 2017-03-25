@@ -26,12 +26,7 @@ import org.jboss.shrinkwrap.impl.base.filter.ExcludeRegExpPaths;
 public class MemberRegistrationTest {
    @Deployment
    public static Archive<?> createTestArchive() {
-      return ShrinkWrap.create(WebArchive.class, "test.war")
-            .addPackages(true, new ExcludeRegExpPaths(".*Test.class$"), PROJECT_ROOT_PACKAGE)
-            .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
-            .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
-            // Deploy our test datasource
-            .addAsWebInfResource("test-ds.xml", "test-ds.xml");
+      return ShrinkWrap.create(WebArchive.class, "test.war");
    }
    @Test
    public void testRegister() throws Exception {
