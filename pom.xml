@@ -155,7 +155,7 @@
          <!-- Compiler plugin enforces Java 1.6 compatibility and activates 
             annotation processors -->
          <plugin>
-            <artifactId>maven-compiler-plugin</artifactId>
+            <artifactId>maven-war-plugin</artifactId>
             <version>2.3.1</version>
             <configuration>
                <source>1.6</source>
@@ -164,20 +164,49 @@
          </plugin>
          <plugin>
             <artifactId>maven-war-plugin</artifactId>
-            <version>2.1.1</version>
+            <version>${version.war.plugin}v</version>
             <configuration>
                <!-- Java EE 6 doesn't require web.xml, Maven needs to catch 
                   up! -->
                <failOnMissingWebXml>false</failOnMissingWebXml>
             </configuration>
          </plugin>
-         <!-- The JBoss AS plugin deploys your war to a local JBoss AS container -->
+         <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${version.surefire.plugin}</version>
+        </plugin>
+	 <!-- The JBoss AS plugin deploys your war to a local JBoss AS container -->
          <!-- To use, run: mvn package jboss-as:deploy -->
          <plugin>
             <groupId>org.jboss.as.plugins</groupId>
             <artifactId>jboss-as-maven-plugin</artifactId>
             <version>7.1.0.Final</version>
          </plugin>
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.0.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.6.201602180812</version>
+				<executions>
+					<execution>
+						<id>default-prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>default-report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+              </plugin>
       </plugins>
    </build>
 
@@ -263,31 +292,6 @@
                 <artifactId>jboss-as-maven-plugin</artifactId>
                 <version>${version.jboss.maven.plugin}</version>
             </plugin>
-			<plugin>
-				<groupId>org.sonarsource.scanner.maven</groupId>
-				<artifactId>sonar-maven-plugin</artifactId>
-				<version>3.0.1</version>
-			</plugin>
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.7.6.201602180812</version>
-				<executions>
-					<execution>
-						<id>default-prepare-agent</id>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>default-report</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-					</execution>
-				</executions>
-              </plugin>
             </plugins>
          </build>
       </profile>
