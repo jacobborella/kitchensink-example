@@ -95,6 +95,16 @@
             <artifactId>cdi-api</artifactId>
             <scope>provided</scope>
         </dependency>
+<dependency>
+    <groupId>javax.faces</groupId>
+    <artifactId>jsf-api</artifactId>
+    <version>1.2</version>
+</dependency>
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>4.0.2.GA</version>
+</dependency>
 
         <!-- Import the JPA API, we use provided scope as the API is included in JBoss EAP 6 -->
         <dependency>
