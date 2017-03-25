@@ -1,6 +1,7 @@
 package org.jboss.as.quickstarts.kitchensink.test.service;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertEquals;
 
 import java.util.logging.Logger;
 
