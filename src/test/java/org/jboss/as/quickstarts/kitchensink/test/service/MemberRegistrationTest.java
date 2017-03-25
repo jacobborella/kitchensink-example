@@ -34,12 +34,12 @@ public class MemberRegistrationTest {
             .addAsWebInfResource("test-ds.xml", "test-ds.xml");
    }
 
-  @Mock
-  private MemberRegistration memberRegistration;
 
    @Test
    public void testRegister() throws Exception {
-      assertNotNull(new Object());
+      Member member = new Member();
+      member.setName("Jacob");
+      assertEquals("Jacob", member.getName());
    }
    
 }
