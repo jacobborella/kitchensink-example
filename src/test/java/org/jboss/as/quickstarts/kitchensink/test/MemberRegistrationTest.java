@@ -33,7 +33,7 @@ public class MemberRegistrationTest {
    }
    @Test
    public void testRegister() throws Exception {
-     assertNotNull(new Object());
+   //  assertNotNull(new Object());
    }
    
 }
