@@ -18,14 +18,36 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.experimental.categories.Category;
-import org.jboss.as.quickstarts.kitchensink.test.category.UnitTest;
-import org.jboss.shrinkwrap.impl.base.filter.ExcludeRegExpPaths;
+
 
 @RunWith(Arquillian.class)
-@Category(UnitTest.class)
+@Category(org.jboss.as.quickstarts.kitchensink.test.category.UnitTest.class)
 public class MemberRegistrationTest {
-  @Test
-   public void testRegister() throws Exception {
-      assetNotNull(new Object());
+   @Deployment
+   public static Archive<?> createTestArchive() {
+      return ShrinkWrap.create(WebArchive.class, "test.war")
+            .addClasses(Member.class, MemberRegistration.class, Resources.class)
+            .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
+            .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
+            // Deploy our test datasource
+            .addAsWebInfResource("test-ds.xml", "test-ds.xml");
    }
+
+   @Inject
+   MemberRegistration memberRegistration;
+
+   @Inject
+   Logger log;
+
+   @Test
+   public void testRegister() throws Exception {
+      Member newMember = memberRegistration.getNewMember();
+      newMember.setName("Jane Doe");
+      newMember.setEmail("jane@mailinator.com");
+      newMember.setPhoneNumber("2125551234");
+      memberRegistration.register();
+      assertNotNull(newMember.getId());
+      log.info(newMember.getName() + " was persisted with id " + newMember.getId());
+   }
+   
 }
