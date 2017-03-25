@@ -226,7 +226,7 @@
                     <plugin>
                         <artifactId>maven-surefire-plugin</artifactId>
 						<configuration>
-							<groups>org.jboss.as.quickstarts.tasksrs.category.UnitTest</groups>
+							<groups>org.jboss.as.quickstarts.kitchensink.test.category.UnitTest</groups>
 						</configuration>
                     </plugin>
                 </plugins>
