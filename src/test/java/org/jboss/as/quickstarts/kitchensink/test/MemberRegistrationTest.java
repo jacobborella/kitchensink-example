@@ -24,7 +24,7 @@ import org.junit.experimental.categories.Category;
 public class MemberRegistrationTest {
   @Test
    public void testRegister() throws Exception {
-     asserNotNull(new Object());
+     assertNotNull(new Object());
    }
    
 }
