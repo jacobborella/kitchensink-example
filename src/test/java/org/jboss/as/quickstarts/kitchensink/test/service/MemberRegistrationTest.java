@@ -43,7 +43,6 @@ public class MemberRegistrationTest {
       member.setPhoneNumber("1234567890");
       assertEquals("Jacob", member.getName());
       assertEquals("foo@bar.com", member.getEmail());
-      assertEquals("1234567890", member.getPhoneNumber());
    }
    
 }
