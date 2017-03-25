@@ -41,7 +41,7 @@ public class MemberRegistrationTest {
       member.setName("Jacob");
       member.setEmail("jb@test.dk");
       assertEquals("Jacob", member.getName());
-      assertEquals(jb@test.dk", member.getEmail());
+      assertEquals("jb@test.dk", member.getEmail());
    }
    
 }
