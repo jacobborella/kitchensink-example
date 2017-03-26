@@ -274,7 +274,21 @@
                     <scope>test</scope>
                 </dependency>
             </dependencies>
-        </profile>
+<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<groups>org.jboss.as.quickstarts.kitchensink.test.category.IntegrationTest</groups>
+							<systemPropertyVariables>
+								<!-- jboss7-remote -->
+                                                          <arquillian.launch>jboss</arquillian.launch>
+                                                        </systemPropertyVariables>
+						</configuration>
+					</plugin>
+				</plugins>
+</build>
+	</profile>
 
         <profile>
             <!-- An optional Arquillian testing profile that executes tests
