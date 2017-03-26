@@ -249,9 +249,12 @@
 					<plugin>
 						<artifactId>maven-surefire-plugin</artifactId>
 						<configuration>
+							<systemPropertyVariables>
+                                                           <arquillian.launch>jboss7-remote</arquillian.launch>
+                                                        </systemPropertyVariables>
 							<groups>org.jboss.as.quickstarts.kitchensink.test.category.IntegrationTest</groups>
 						</configuration>
-					</plugin>
+                                        </plugin>
 				</plugins>
 			</build>
 		</profile>
