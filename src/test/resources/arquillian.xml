@@ -24,7 +24,7 @@
             <property name="executionType">REMOTE</property>
         </protocol>
         <configuration>
-          <property name="providerUrl">jnp://127.0.0.1:15090</property>
+          <property name="providerUrl">jnp://test-app:15090</property>
           <!--
           <property name="managementAddress">TEST</property>
           <property name="managementPort">TEST2</property>
