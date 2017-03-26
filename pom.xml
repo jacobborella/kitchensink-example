@@ -250,7 +250,7 @@
 					<plugin>
 						<artifactId>maven-surefire-plugin</artifactId>
 						<configuration>
-							<groups>org.jboss.as.quickstarts.tasksrs.category.IntegrationTest</groups>
+							<groups>org.jboss.as.quickstarts.kitchensink.test.category.IntegrationTest</groups>
 						</configuration>
 					</plugin>
 				</plugins>
