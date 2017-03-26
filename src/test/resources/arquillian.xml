@@ -24,11 +24,11 @@
             <property name="executionType">REMOTE</property>
         </protocol>
         <configuration>
+          <!--managementAddress, password, managementPort, username
           <property name="providerUrl">jnp://test-app:15090</property>
-          <!--
-          <property name="managementAddress">TEST</property>
-          <property name="managementPort">TEST2</property>
           -->
+          <property name="managementAddress">test-app</property>
+          <property name="managementPort">15090</property>
       </configuration>
     </container>
 </arquillian>
