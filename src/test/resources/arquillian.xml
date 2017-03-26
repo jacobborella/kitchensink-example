@@ -28,7 +28,7 @@
           <property name="providerUrl">jnp://test-app:15090</property>
           -->
           <property name="managementAddress">test-app</property>
-          <property name="managementPort">15090</property>
+          <property name="managementPort">9999</property>
       </configuration>
     </container>
 </arquillian>
