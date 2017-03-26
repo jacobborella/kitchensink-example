@@ -252,7 +252,7 @@
 						<configuration>
 							<groups>org.jboss.as.quickstarts.kitchensink.test.category.IntegrationTest</groups>
 							<systemPropertyVariables>
-                                                          <arquillian.launch>jboss_remote</arquillian.launch>
+                                                          <arquillian.launch>jboss7-remote</arquillian.launch>
                                                         </systemPropertyVariables>
 						</configuration>
 					</plugin>
