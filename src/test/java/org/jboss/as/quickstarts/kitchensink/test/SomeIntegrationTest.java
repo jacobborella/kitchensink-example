@@ -23,7 +23,7 @@ import org.jboss.shrinkwrap.impl.base.filter.ExcludeRegExpPaths;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.mockito.Mock;
 
-@RunWith(MockitoJUnitRunner)
+@RunWith(MockitoJUnitRunner.class)
 @Category(org.jboss.as.quickstarts.kitchensink.test.category.IntegrationTest.class)
 public class SomeIntegrationTest {
    @Deployment
