@@ -23,7 +23,7 @@ import org.jboss.shrinkwrap.impl.base.filter.ExcludeRegExpPaths;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.mockito.Mock;
 
-@RunWith(org.jboss.arquillian.junit.Arquillian.class)
+@RunWith(MockitoJUnitRunner)
 @Category(org.jboss.as.quickstarts.kitchensink.test.category.IntegrationTest.class)
 public class SomeIntegrationTest {
    @Deployment
@@ -37,7 +37,7 @@ public class SomeIntegrationTest {
 
 
    @Test
-   public void foo() throws Exception {
+   public void notFinished() throws Exception {
       Member member = new Member();
       member.setName("Jacob");
       member.setEmail("jb@test.dk");
