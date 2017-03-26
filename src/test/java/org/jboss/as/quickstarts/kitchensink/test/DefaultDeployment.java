@@ -45,7 +45,7 @@ public class DefaultDeployment {
     }
 
     public DefaultDeployment withImportedData() {
-        webArchive = webArchive.addAsResource("import.sql");
+//        webArchive = webArchive.addAsResource("import.sql");
         return this;
     }
 
