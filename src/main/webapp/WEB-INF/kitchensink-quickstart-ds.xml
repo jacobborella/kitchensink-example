@@ -9,16 +9,11 @@
       this in META-INF/persistence.xml -->
    <datasource jndi-name="java:jboss/datasources/PostgreSQLDS" enabled="${postgresql.enabled}" use-java-context="true" pool-name="PostgreSQLDS" use-ccm="true">
        <connection-url>jdbc:postgresql://postgresql:5432/devdb</connection-url>
-       <driver>postgresql</driver>
+       <driver-class>org.postgresql.Driver</driver-class> 
        <security>
          <user-name>devuser</user-name>
          <password>devpass</password>
        </security>
    </datasource>
-   <drivers>
-      <driver name="postgresql" module="org.postgresql.jdbc">
-          <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
-      </driver>
-   </drivers>
 </datasources>
  
