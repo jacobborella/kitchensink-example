@@ -13,7 +13,7 @@
     <mirror>
       <id>local-oc-repo</id>
       <name>Local Openshift Repository</name>
-      <url>http://http://nexus-cicd.192.168.99.100.nip.io/nexus/content/groups/public</url>
+      <url>http://nexus-cicd.192.168.99.100.nip.io/nexus/content/groups/public</url>
       <mirrorOf>openshift-repository</mirrorOf>
     </mirror>
   </mirrors>
