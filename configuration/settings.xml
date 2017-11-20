@@ -9,12 +9,12 @@
       <password>admin123</password>
     </server>
   </servers>
-  <!--mirrors>
-           <mirror>
+  <mirrors>
+    <mirror>
       <id>local-oc-repo</id>
       <name>Local Openshift Repository</name>
       <url>http://${env.NEXUS_HOST}/content/groups/public</url>
       <mirrorOf>openshift-repository</mirrorOf>
     </mirror>
-  </mirrors-->
+  </mirrors>
 </settings>
